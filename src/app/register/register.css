@@ -2,18 +2,17 @@
 /* Importa la fuente 'Poppins' desde Google Fonts para utilizarla en todo el sitio */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
 /* ---------------------- RESET GENERAL ---------------------- */
-/* Aplica un reset básico para garantizar que todos los elementos tengan el mismo comportamiento en todos los navegadores. */
 * {
   font-family: 'Poppins', sans-serif; /* Usamos la fuente 'Poppins' para todos los elementos */
-  box-sizing: border-box; /* Garantiza que el padding y el borde se incluyan en el ancho y alto de los elementos */
-  margin: 0; /* Elimina los márgenes por defecto de todos los elementos */
-  padding: 0; /* Elimina el padding por defecto de todos los elementos */
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto de los elementos */
+  margin: 0;
+  padding: 0;
 }
 
 /* ---------------------- LAYOUT GENERAL ---------------------- */
-/* Define el contenedor principal que centrará el formulario */
-.container {
+.contenedor {
   min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura visible de la pantalla */
   display: flex; /* Utiliza Flexbox para centrar el contenido */
   justify-content: center; /* Centra el contenido horizontalmente */
@@ -22,34 +21,33 @@
   background-color: #F2E0D0; /* Establece un fondo beige claro */
 }
 
-/* ---------------------- FORMULARIO LOGIN ---------------------- */
-/* Define el contenedor del formulario con fondo oscuro, bordes redondeados, y sombra sutil */
-.loginContainer {
+/* ---------------------- FORMULARIO ---------------------- */
+.contenedorInicial {
   background-color: #59443F; /* Fondo marrón oscuro para el contenedor del formulario */
-  padding: 100px; /* Espaciado interno para que no se vea tan apretado */
-  border-radius: 10px; /* Bordes redondeados para un aspecto más amigable */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil alrededor para dar profundidad */
-  display: block; /* Usa Grid para una mejor organización interna */
-  justify-content: center; /* Centra los elementos dentro de la caja */
-  text-align: center; /* Asegura que el texto dentro esté centrado */
+  padding: 80px; /* Reduce el espaciado para que el formulario no esté tan comprimido */
+  border-radius: 12px; /* Bordes más redondeados para un aspecto más suave */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más sutil y amplia */
+  display: grid; /* Usa Grid para organizar los elementos */
+  grid-template-columns: repeat(2, 1fr); /* Divide el formulario en 3 columnas */
+  gap: 20px; /* Espacio entre las filas y columnas */
+  justify-items: center; /* Centra los elementos dentro de las celdas */
   width: 100%; /* El contenedor ocupa todo el ancho disponible */
-  max-width: 450px; /* Limita el tamaño máximo a 350px de ancho */
+  max-width: 700px; /* Limita el tamaño máximo a 550px de ancho */
   animation: floatIn 1.2s ease-out; /* Aparece con una animación flotante */
   transition: transform 0.3s ease; /* Transición suave para efectos de transformación */
 }
 
-/* ---------------------- Estilo para el título "Inicio de Sesión" ----------------------*/
-.loginContainer h2 {
+/* ---------------------- TÍTULO ---------------------- */
+.contenedorInicial h2 {
   color: #F2E0D0; /* Color del texto en un tono beige claro */
-  font-size: 35px; /* Tamaño grande para el título */
+  font-size: 36px; /* Tamaño grande para el título */
   text-align: center; /* Asegura que el título esté centrado */
   margin-bottom: 20px; /* Espacio debajo del título */
   grid-column: span 2; /* Hace que el título ocupe las 3 columnas */
 }
 
 /* ---------------------- CAMPOS DE USUARIO Y CONTRASEÑA ---------------------- */
-/* Contenedor para los campos de usuario y contraseña */
-.Usuario {
+.user {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow'; /* Fuente específica para los campos */
   margin: 1em auto; /* Espaciado alrededor del contenedor */
   max-width: 250px; /* Ancho máximo para que los campos no se estiren demasiado */
@@ -57,19 +55,20 @@
   text-align: center; /* Centra el texto dentro de los campos */
 }
 
-/* Estilo de los campos de entrada (usuario y contraseña) */
-.Usuario input {
-  font-size: 1em; /* Tamaño de fuente normal */
-  padding: 1em 1em 0.5em 1em; /* Espaciado interno con más espacio arriba */
+/* Estilo de los campos de entrada (usuario, apellidos, correo, etc.) */
+.user input {
+  font-size: 1.1em; /* Un tamaño de fuente más grande */
+  padding: 1em 1em 0.5em 1em; /* Espaciado interno más amplio */
   outline: none; /* Elimina el borde azul de enfoque */
   border: 2px solid #F2E0D0; /* Borde beige claro para los campos */
-  border-radius: 20px; /* Bordes redondeados para los campos */
+  border-radius: 25px; /* Bordes redondeados más suaves */
   width: 100%; /* Hace que el campo ocupe todo el ancho disponible */
-  transition: border-color 0.3s; /* Transición suave para el cambio de color del borde */
+  transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave para el borde y la sombra */
+  font-weight: 400; /* Peso de la fuente normal */
 }
 
 /* Estilo de la etiqueta dentro de los campos */
-.Usuario label {
+.user label {
   position: absolute; /* Posicionamiento absoluto para colocarla dentro del campo */
   top: 50%; /* Centra verticalmente la etiqueta */
   left: 1em; /* Deja un pequeño margen a la izquierda */
@@ -82,14 +81,15 @@
 }
 
 /* Cambia el borde del campo cuando está enfocado o tiene un valor válido */
-.Usuario input:focus,
-.Usuario input:valid {
+.user input:focus,
+.user input:valid {
   border-color: #F2E0D0; /* Cambia el borde a beige claro */
+  
 }
 
 /* Mueve y escala la etiqueta cuando el campo está enfocado o tiene un valor */
-.Usuario input:focus ~ label,
-.Usuario input:valid ~ label {
+.user input:focus ~ label,
+.user input:valid ~ label {
   top: 0; /* Mueve la etiqueta hacia arriba */
   left: 1em; /* Asegura que quede alineada a la izquierda */
   transform: translateY(-50%) scale(0.9); /* Escala y ajusta la posición de la etiqueta */
@@ -99,6 +99,7 @@
   border-radius: 5px; /* Bordes redondeados para la etiqueta */
   color: #F2E0D0; /* Color de texto beige claro */
 }
+
 
 /* ---------------------- BOTÓN ---------------------- */
 /* Estilo del botón de inicio de sesión */
@@ -119,11 +120,10 @@ button {
   transition: all 250ms; /* Transición suave para todos los cambios */
   justify-items: center; /* Centra los elementos dentro del botón */
   grid-column: span 2; /* Hace que el título ocupe las 3 columnas */
-
 }
 
 /* Estilo de la capa animada detrás del botón */
-button::before {
+boton::before {
   content: ""; /* Necesario para crear un pseudo-elemento */
   position: absolute; /* Lo posicionamos de forma absoluta dentro del botón */
   top: 0; /* Se coloca en la parte superior */
@@ -137,109 +137,11 @@ button::before {
 }
 
 /* Estilo cuando el mouse pasa sobre el botón */
-button:hover {
+boton:hover {
   color: #59443F; /* Cambia el color del texto a marrón oscuro */
 }
 
 /* Expande el fondo animado cuando el mouse pasa sobre el botón */
-button:hover::before {
+boton:hover::before {
   width: 100%; /* Expande el fondo a todo el ancho del botón */
-}
-
-/* ---------------------- TEXTO DE REGISTRO ---------------------- */
-/* Estilo para el texto de registro */
-.register-text {
-  color: #F2E0D0; /* Color de texto beige claro */
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow'; /* Fuente específica */
-  font-size: 1em; /* Tamaño de fuente normal */
-  grid-column: span 2; /* Hace que el título ocupe las 3 columnas */
-
-}
-
-/* Estilo para el enlace dentro del texto de registro */
-.register-text a {
-  color: white; /* Enlace con texto blanco */
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow'; /* Fuente específica */
-  text-decoration: none; /* Elimina el subrayado del enlace */
-}
-
-/* ---------------------- ANIMACIONES ---------------------- */
-/* Animación para el fondo en la carga de la página */
-@keyframes fadeInBg {
-  from { background-color: #cbb8a4; opacity: 0; } /* Empieza con un fondo claro y opaco */
-  to { background-color: #F2E0D0; opacity: 1; } /* Termina con el fondo beige claro */
-}
-
-/* Animación para el contenedor flotante al aparecer */
-@keyframes floatIn {
-  from { transform: translateY(40px); opacity: 0; } /* Empieza fuera de la vista y opaco */
-  to { transform: translateY(0); opacity: 1; } /* Termina centrado y visible */
-}
-
-/* Animación para el deslizamiento hacia abajo */
-@keyframes slideDown {
-  from { transform: translateY(-15px); opacity: 0; } /* Empieza fuera de la vista y opaco */
-  to { transform: translateY(0); opacity: 1; } /* Termina en la posición original */
-}
-
-/* ---------------------- DISEÑO RESPONSIVO ---------------------- */
-/* Ajustes para pantallas de tabletas */
-@media (max-width: 768px) {
-  .container {
-    height: auto; /* Permite que el contenedor ajuste su altura según el contenido */
-    padding: 30px 15px; /* Añade espacio alrededor del contenedor */
-    flex-direction: column; /* Coloca los elementos en columna */
-  }
-
-  .loginContainer {
-    width: 90%; /* Hace que el formulario ocupe el 90% del ancho disponible */
-    padding: 20px; /* Añade más espacio dentro del formulario */
-  }
-
-  .loginContainer h2 {
-    font-size: 28px; /* Reduce el tamaño del título */
-  }
-
-  .Usuario {
-    width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
-    margin: 1em 0; /* Añade espacio arriba y abajo de los campos */
-  }
-
-  .Usuario input {
-    font-size: 1em; /* Ajusta el tamaño de la fuente dentro de los campos */
-    padding: 1em; /* Añade más espacio dentro de los campos */
-  }
-
-  .Usuario label {
-    font-size: 0.9em; /* Reduce el tamaño de la etiqueta */
-  }
-
-  button {
-    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
-    font-size: 1em; /* Ajusta el tamaño de la fuente */
-    padding: 1em; /* Añade más espacio dentro del botón */
-  }
-
-  .register-text {
-    font-size: 0.9em; /* Ajusta el tamaño del texto de registro */
-  }
-}
-
-/* Ajustes para pantallas más pequeñas (teléfonos) */
-@media (max-width: 480px) {
-  .loginContainer h2 {
-    font-size: 24px; /* Reduce aún más el tamaño del título */
-  }
-
-  .Usuario input {
-    font-size: 0.95em; /* Ajusta el tamaño de la fuente en los campos */
-  }
-
-  button {
-    font-size: 0.95em; /* Ajusta el tamaño de la fuente en el botón */
-  }
-
-  .register-text {
-    font-size: 0.85em; /* Ajusta el tamaño del texto de registro */
-  }
 }

@@ -1,10 +1,18 @@
+"use client";
 import styles from "./page.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
+  const goRegister = () =>{
+    router.push("/register/")
+  };
+  
   return (
     <div className="container">
       <div className="loginContainer">
-        <h2>Inicio De Sesion</h2>
+        <h2>INICIO DE SESION</h2>
 
         <div className="Usuario">
           <input type="text" required/>
@@ -15,14 +23,11 @@ export default function Home() {
           <input type="password" required/>
           <label htmlFor="Nombre">Contraseña</label>
         </div>
-
-        <br />
         
         <button className="button">Iniciar</button>
 
-        <br />
         <p className="register-text">
-          ¿No tienes cuenta? <a href="Registro.html">Regístrate</a>
+          ¿No tienes cuenta? <a onClick={goRegister}>Regístrate</a>
         </p>
       </div>
     </div>
