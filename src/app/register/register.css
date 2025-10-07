@@ -65,6 +65,7 @@
   width: 100%; /* Hace que el campo ocupe todo el ancho disponible */
   transition: border-color 0.3s, box-shadow 0.3s; /* Transición suave para el borde y la sombra */
   font-weight: 400; /* Peso de la fuente normal */
+  gap: 3;
 }
 
 /* Estilo de la etiqueta dentro de los campos */

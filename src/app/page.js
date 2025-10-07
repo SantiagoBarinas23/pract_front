@@ -8,6 +8,10 @@ export default function Home() {
   const goRegister = () =>{
     router.push("/register/")
   };
+
+  const goinicio = () => {
+    router.push ("/inicio/")
+  }
   
   return (
     <div className="container">
@@ -24,7 +28,7 @@ export default function Home() {
           <label htmlFor="Nombre">Contraseña</label>
         </div>
         
-        <button className="button">Iniciar</button>
+        <button className="button"><a onClick={goinicio}>Iniciar</a></button>
 
         <p className="register-text">
           ¿No tienes cuenta? <a onClick={goRegister}>Regístrate</a>
