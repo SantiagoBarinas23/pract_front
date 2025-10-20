@@ -16,10 +16,11 @@
 .container {
   min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura visible de la pantalla */
   display: flex; /* Utiliza Flexbox para centrar el contenido */
-  justify-content: center; /* Centra el contenido horizontalmente */
+  justify-content: flex-start; /* Mueve el contenido a la derecha */
   align-items: center; /* Centra el contenido verticalmente */
   text-align: center; /* Centra el texto dentro del contenedor */
   background-color: #F2E0D0; /* Establece un fondo beige claro */
+  padding-right: 80px; /* Opcional: ajusta el margen derecho */
 }
 
 /* ---------------------- FORMULARIO LOGIN ---------------------- */
