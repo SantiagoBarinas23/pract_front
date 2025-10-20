@@ -145,3 +145,8 @@ boton:hover {
 boton:hover::before {
   width: 100%; /* Expande el fondo a todo el ancho del botón */
 }
+
+.buton {
+  align-items: center;
+  grid-column: 1;
+}

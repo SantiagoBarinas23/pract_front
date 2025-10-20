@@ -38,6 +38,8 @@ export default function Register () {
 
             <button className="boton">REGISTRO</button>
 
+            <button className="buto">Regresar</button>
+
       </div>
     </div>
     )
