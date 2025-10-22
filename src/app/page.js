@@ -10,10 +10,25 @@ export default function Home() {
     <div className="Container">
       <div className="Login">
         <h1>Inicio</h1>
-        <div className="knot-right">
-          <img src="/Inicio.png" alt="Inicio" />
+        <div className="login-body">
+          <div className="knot-left">
+            <div className="Formulario">
+              <div className="Usuario">
+                <input type="text" required />
+                <label htmlFor="Nombre">Usuario</label>
+              </div>
+              <div className="Usuario">
+                <input type="password" required />
+                <label htmlFor="Nombre">Contraseña</label>
+              </div>
+              <button className="button">Iniciar</button>
+            </div>
+          </div>
+          <div className="knot-right">
+            <img src="/Inicio.png" alt="Inicio" />
+          </div>
         </div>
-      </div> 
+      </div>
     </div>
   );
 
