@@ -1,246 +1,52 @@
-/* ---------------------- IMPORTAR FUENTE ---------------------- */
-/* Importa la fuente 'Poppins' desde Google Fonts para utilizarla en todo el sitio */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*-----------------Imortaciones -----------------*/
 
-/* ---------------------- RESET GENERAL ---------------------- */
-/* Aplica un reset básico para garantizar que todos los elementos tengan el mismo comportamiento en todos los navegadores. */
-* {
-  font-family: 'Poppins', sans-serif; /* Usamos la fuente 'Poppins' para todos los elementos */
-  box-sizing: border-box; /* Garantiza que el padding y el borde se incluyan en el ancho y alto de los elementos */
-  margin: 0; /* Elimina los márgenes por defecto de todos los elementos */
-  padding: 0; /* Elimina el padding por defecto de todos los elementos */
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic:wght@400..700&display=swap');
+
+
+.Container {
+
+  background: radial-gradient(circle at top left, #59554C, #F2EFDF, #AEBFBE);
+  min-height: 97vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }
 
-/* ---------------------- LAYOUT GENERAL ---------------------- */
-/* Define el contenedor principal que centrará el formulario */
-.container {
-  min-height: 100vh; /* Asegura que el contenedor ocupe al menos el 100% de la altura visible de la pantalla */
-  display: flex; /* Utiliza Flexbox para centrar el contenido */
-  justify-content: flex-start; /* Mueve el contenido a la derecha */
-  align-items: center; /* Centra el contenido verticalmente */
-  text-align: center; /* Centra el texto dentro del contenedor */
-  background-color: #F2E0D0; /* Establece un fondo beige claro */
-  padding-right: 80px; /* Opcional: ajusta el margen derecho */
+.Login {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  max-width: 500px;
+  background: #F8F9FD;
+  border-radius: 40px;
+  border: 5px solid rgb(255, 255, 255);
+  
 }
 
-/* ---------------------- FORMULARIO LOGIN ---------------------- */
-/* Define el contenedor del formulario con fondo oscuro, bordes redondeados, y sombra sutil */
-.loginContainer {
-  background-color: #59443F; /* Fondo marrón oscuro para el contenedor del formulario */
-  padding: 100px; /* Espaciado interno para que no se vea tan apretado */
-  border-radius: 10px; /* Bordes redondeados para un aspecto más amigable */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra sutil alrededor para dar profundidad */
-  display: block; /* Usa Grid para una mejor organización interna */
-  justify-content: center; /* Centra los elementos dentro de la caja */
-  text-align: center; /* Asegura que el texto dentro esté centrado */
-  width: 100%; /* El contenedor ocupa todo el ancho disponible */
-  max-width: 450px; /* Limita el tamaño máximo a 350px de ancho */
-  animation: floatIn 1.2s ease-out; /* Aparece con una animación flotante */
-  transition: transform 0.3s ease; /* Transición suave para efectos de transformación */
+.Login h1 {
+  justify-items: center;
+  text-align: center;
+  font-family: "Special Gothic", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #798C8C;
+  
 }
 
-/* ---------------------- Estilo para el título "Inicio de Sesión" ----------------------*/
-.loginContainer h2 {
-  color: #F2E0D0; /* Color del texto en un tono beige claro */
-  font-size: 35px; /* Tamaño grande para el título */
-  text-align: center; /* Asegura que el título esté centrado */
-  margin-bottom: 20px; /* Espacio debajo del título */
-  grid-column: span 2; /* Hace que el título ocupe las 3 columnas */
+.knot-right{
+  background-color: red;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
 }
 
-/* ---------------------- CAMPOS DE USUARIO Y CONTRASEÑA ---------------------- */
-/* Contenedor para los campos de usuario y contraseña */
-.Usuario {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow'; /* Fuente específica para los campos */
-  margin: 1em auto; /* Espaciado alrededor del contenedor */
-  max-width: 250px; /* Ancho máximo para que los campos no se estiren demasiado */
-  position: relative; /* Necesario para posicionar la etiqueta de manera absoluta */
-  text-align: center; /* Centra el texto dentro de los campos */
-}
+.knot-right img {
+  width: 390px;
+  height: 390px;
 
-/* Estilo de los campos de entrada (usuario y contraseña) */
-.Usuario input {
-  font-size: 1em; /* Tamaño de fuente normal */
-  padding: 1em 1em 0.5em 1em; /* Espaciado interno con más espacio arriba */
-  outline: none; /* Elimina el borde azul de enfoque */
-  border: 2px solid #F2E0D0; /* Borde beige claro para los campos */
-  border-radius: 20px; /* Bordes redondeados para los campos */
-  width: 100%; /* Hace que el campo ocupe todo el ancho disponible */
-  transition: border-color 0.3s; /* Transición suave para el cambio de color del borde */
-}
-
-/* Estilo de la etiqueta dentro de los campos */
-.Usuario label {
-  position: absolute; /* Posicionamiento absoluto para colocarla dentro del campo */
-  top: 50%; /* Centra verticalmente la etiqueta */
-  left: 1em; /* Deja un pequeño margen a la izquierda */
-  transform: translateY(-50%); /* Ajusta el desplazamiento para centrarla */
-  color: #59443F; /* Color del texto en un marrón oscuro */
-  pointer-events: none; /* Evita que la etiqueta interfiera con los clics */
-  background-color: transparent; /* Fondo transparente para la etiqueta */
-  padding: 0 0.25em; /* Espaciado extra alrededor de la etiqueta */
-  transition: all 0.3s ease; /* Transición suave para el movimiento de la etiqueta */
-}
-
-/* Cambia el borde del campo cuando está enfocado o tiene un valor válido */
-.Usuario input:focus,
-.Usuario input:valid {
-  border-color: #F2E0D0; /* Cambia el borde a beige claro */
-}
-
-/* Mueve y escala la etiqueta cuando el campo está enfocado o tiene un valor */
-.Usuario input:focus ~ label,
-.Usuario input:valid ~ label {
-  top: 0; /* Mueve la etiqueta hacia arriba */
-  left: 1em; /* Asegura que quede alineada a la izquierda */
-  transform: translateY(-50%) scale(0.9); /* Escala y ajusta la posición de la etiqueta */
-  background-color: #59443F; /* Fondo marrón oscuro para la etiqueta */
-  border: 2px solid #F2E0D0; /* Borde beige claro */
-  padding: 0 0.4em; /* Añade un poco de espacio alrededor de la etiqueta */
-  border-radius: 5px; /* Bordes redondeados para la etiqueta */
-  color: #F2E0D0; /* Color de texto beige claro */
-}
-
-/* ---------------------- BOTÓN ---------------------- */
-/* Estilo del botón de inicio de sesión */
-button {
-  padding: 15px 25px; /* Espaciado interior del botón */
-  min-width: 120px; /* Ancho mínimo del botón */
-  border: 2px solid #F2E0D0; /* Borde beige claro */
-  border-radius: 15px; /* Bordes redondeados */
-  color: #F2E0D0; /* Texto beige claro */
-  background: transparent; /* Fondo transparente para el botón */
-  font-weight: 1000; /* Texto en negrita */
-  font-size: 14px; /* Tamaño de fuente pequeño */
-  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
-  position: relative; /* Necesario para el efecto ::before */
-  overflow: hidden; /* Oculta cualquier contenido fuera del borde */
-  margin: 20px auto; /* Espaciado alrededor del botón */
-  z-index: 1; /* Coloca el texto del botón por encima del fondo animado */
-  transition: all 250ms; /* Transición suave para todos los cambios */
-  justify-items: center; /* Centra los elementos dentro del botón */
-  grid-column: span 2; /* Hace que el título ocupe las 3 columnas */
-
-}
-
-/* Estilo de la capa animada detrás del botón */
-button::before {
-  content: ""; /* Necesario para crear un pseudo-elemento */
-  position: absolute; /* Lo posicionamos de forma absoluta dentro del botón */
-  top: 0; /* Se coloca en la parte superior */
-  left: 0; /* Se coloca a la izquierda */
-  height: 100%; /* Ocupa toda la altura del botón */
-  width: 0; /* Inicialmente no tiene ancho */
-  background-color: #F2E0D0; /* Fondo beige claro */
-  z-index: -1; /* Coloca la capa detrás del texto del botón */
-  box-shadow: 4px 8px 19px -3px #59443F; /* Sombra sutil para el fondo animado */
-  transition: all 250ms; /* Transición suave para el cambio de ancho */
-}
-
-/* Estilo cuando el mouse pasa sobre el botón */
-button:hover {
-  color: #59443F; /* Cambia el color del texto a marrón oscuro */
-}
-
-/* Expande el fondo animado cuando el mouse pasa sobre el botón */
-button:hover::before {
-  width: 100%; /* Expande el fondo a todo el ancho del botón */
-}
-
-/* ---------------------- TEXTO DE REGISTRO ---------------------- */
-/* Estilo para el texto de registro */
-.register-text {
-  color: #F2E0D0; /* Color de texto beige claro */
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow'; /* Fuente específica */
-  font-size: 1em; /* Tamaño de fuente normal */
-  grid-column: span 2; /* Hace que el título ocupe las 3 columnas */
-
-}
-
-/* Estilo para el enlace dentro del texto de registro */
-.register-text a {
-  color: white; /* Enlace con texto blanco */
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow'; /* Fuente específica */
-  text-decoration: none; /* Elimina el subrayado del enlace */
-}
-
-/* ---------------------- ANIMACIONES ---------------------- */
-/* Animación para el fondo en la carga de la página */
-@keyframes fadeInBg {
-  from { background-color: #cbb8a4; opacity: 0; } /* Empieza con un fondo claro y opaco */
-  to { background-color: #F2E0D0; opacity: 1; } /* Termina con el fondo beige claro */
-}
-
-/* Animación para el contenedor flotante al aparecer */
-@keyframes floatIn {
-  from { transform: translateY(40px); opacity: 0; } /* Empieza fuera de la vista y opaco */
-  to { transform: translateY(0); opacity: 1; } /* Termina centrado y visible */
-}
-
-/* Animación para el deslizamiento hacia abajo */
-@keyframes slideDown {
-  from { transform: translateY(-15px); opacity: 0; } /* Empieza fuera de la vista y opaco */
-  to { transform: translateY(0); opacity: 1; } /* Termina en la posición original */
-}
-
-/* ---------------------- DISEÑO RESPONSIVO ---------------------- */
-/* Ajustes para pantallas de tabletas */
-@media (max-width: 768px) {
-  .container {
-    height: auto; /* Permite que el contenedor ajuste su altura según el contenido */
-    padding: 30px 15px; /* Añade espacio alrededor del contenedor */
-    flex-direction: column; /* Coloca los elementos en columna */
-  }
-
-  .loginContainer {
-    width: 90%; /* Hace que el formulario ocupe el 90% del ancho disponible */
-    padding: 20px; /* Añade más espacio dentro del formulario */
-  }
-
-  .loginContainer h2 {
-    font-size: 28px; /* Reduce el tamaño del título */
-  }
-
-  .Usuario {
-    width: 100%; /* Hace que los campos ocupen todo el ancho disponible */
-    margin: 1em 0; /* Añade espacio arriba y abajo de los campos */
-  }
-
-  .Usuario input {
-    font-size: 1em; /* Ajusta el tamaño de la fuente dentro de los campos */
-    padding: 1em; /* Añade más espacio dentro de los campos */
-  }
-
-  .Usuario label {
-    font-size: 0.9em; /* Reduce el tamaño de la etiqueta */
-  }
-
-  button {
-    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
-    font-size: 1em; /* Ajusta el tamaño de la fuente */
-    padding: 1em; /* Añade más espacio dentro del botón */
-  }
-
-  .register-text {
-    font-size: 0.9em; /* Ajusta el tamaño del texto de registro */
-  }
-}
-
-/* Ajustes para pantallas más pequeñas (teléfonos) */
-@media (max-width: 480px) {
-  .loginContainer h2 {
-    font-size: 24px; /* Reduce aún más el tamaño del título */
-  }
-
-  .Usuario input {
-    font-size: 0.95em; /* Ajusta el tamaño de la fuente en los campos */
-  }
-
-  button {
-    font-size: 0.95em; /* Ajusta el tamaño de la fuente en el botón */
-  }
-
-  .register-text {
-    font-size: 0.85em; /* Ajusta el tamaño del texto de registro */
-  }
 }
