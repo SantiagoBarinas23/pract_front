@@ -57,6 +57,7 @@
   width: 300px;
   height: 300px;
   object-fit: contain;
+  border-radius: 50px;
 }
 
 .Usuario {
@@ -136,7 +137,7 @@ button::before {
   left: 0; /* Se coloca a la izquierda */
   height: 100%; /* Ocupa toda la altura del botón */
   width: 0; /* Inicialmente no tiene ancho */
-  background-color: #F2E0D0; /* Fondo beige claro */
+  background-color: #D0D9D4; /* Fondo beige claro */
   z-index: -1; /* Coloca la capa detrás del texto del botón */
   box-shadow: 4px 8px 19px -3px #59443F; /* Sombra sutil para el fondo animado */
   transition: all 250ms; /* Transición suave para el cambio de ancho */
