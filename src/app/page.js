@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <div className="Container">
       <div className="Login">
-        <h1>Inicio</h1>
+        <h1>Iniciar secion</h1>
         <div className="login-body">
           <div className="knot-left">
             <div className="Formulario">
