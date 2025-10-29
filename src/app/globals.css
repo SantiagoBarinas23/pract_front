@@ -1,159 +1,183 @@
 /*-----------------Imortaciones -----------------*/
 
+/* Importa una fuente llamada "Special Gothic" desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic:wght@400..700&display=swap');
 
-
+/* Contenedor general de la página */
 .Container {
-
-  background: radial-gradient(circle at top left, #7e7a70, #F2EFDF, #AEBFBE);
-  min-height: 97vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
+  background: radial-gradient(circle at top left, #7e7a70, #F2EFDF, #AEBFBE); /* Fondo con degradado radial desde la esquina superior izquierda */
+  min-height: 97vh; /* Altura mínima del 97% del alto de la pantalla */
+  display: flex; /* Usa Flexbox para organizar el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
 }
 
+/* Caja principal del login */
 .Login {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 800px; /* Aumenta para que haya espacio para ambos lados */
-  background: #F2EFDF;
-  border-radius: 40px;
-  padding: 20px;
+  display: flex; /* Activa flexbox */
+  flex-direction: column; /* Coloca los elementos uno debajo del otro */
+  align-items: center; /* Centra los elementos horizontalmente */
+  max-width: 800px; /* Ancho máximo del contenedor */
+  background: #F2EFDF; /* Color de fondo claro */
+  border-radius: 40px; /* Bordes redondeados */
+  padding: 20px; /* Espaciado interno */
 }
 
-/* Nuevo contenedor que acomoda el formulario y la imagen lado a lado */
+/* Contenedor interno que acomoda el formulario y la imagen lado a lado */
 .login-body {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px; /* espacio entre formulario e imagen */
+  display: flex; /* Usa Flexbox */
+  flex-direction: row; /* Coloca los elementos en fila */
+  justify-content: space-between; /* Espacio entre los elementos */
+  align-items: center; /* Centra verticalmente */
+  gap: 30px; /* Espacio entre el formulario y la imagen */
 }
 
-.Login h1
-{
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+/* Estilos para el título principal dentro del login */
+.Login h1 {
+  align-items: center; /* Centra verticalmente (aunque no afecta h1 directamente) */
+  justify-content: center; /* Centra horizontalmente */
+  text-align: center; /* Centra el texto */
 }
+
 /* Ajustes del formulario */
 .Formulario {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  gap: 10px;
-  padding: 10px;
+  display: flex; /* Activa flexbox */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: center; /* Centra horizontalmente los elementos */
+  text-align: center; /* Centra el texto */
+  flex-direction: column; /* Organiza los elementos en columna */
+  gap: 10px; /* Espacio entre los campos */
+  padding: 10px; /* Espaciado interno */
 }
 
-/* Ajustes para alinear imagen */
+/* Ajustes para la imagen a la derecha */
 .knot-right {
-  border-radius: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-radius: 6px; /* Bordes ligeramente redondeados */
+  display: flex; /* Usa flexbox */
+  justify-content: center; /* Centra horizontalmente la imagen */
+  align-items: center; /* Centra verticalmente la imagen */
 }
 
+/* Imagen dentro del contenedor */
 .knot-right img {
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  border-radius: 50px;
+  width: 300px; /* Ancho de la imagen */
+  height: 300px; /* Alto de la imagen */
+  object-fit: contain; /* Mantiene proporciones sin recortar */
+  border-radius: 50px; /* Bordes redondeados */
 }
 
+/* Contenedor de cada campo de usuario */
 .Usuario {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow'; /* Fuente específica para los campos */
-   margin: 0.5em auto; /* Espaciado alrededor del contenedor */
-  max-width: 250px; /* Ancho máximo para que los campos no se estiren demasiado */
-  position: relative; /* Necesario para posicionar la etiqueta de manera absoluta */
-  text-align: center; /* Centra el texto dentro de los campos */
+  display: flex; /* Activa flexbox */
+  align-items: center; /* Centra el ícono y el input verticalmente */
+  gap: 10px; /* Espacio entre ícono y campo */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow'; /* Fuente específica */
+  margin: 0.5em auto; /* Margen vertical y centrado horizontal */
+  max-width: 250px; /* Ancho máximo del campo */
+  position: relative; /* Permite posicionar elementos hijos de forma absoluta */
 }
 
+/* Estilo del ícono al lado del campo */
+.icono-usuario {
+  font-size: 20px; /* Tamaño del ícono */
+  display: flex; /* Centra el ícono */
+  align-items: center;
+  justify-content: center;
+  color:#59443F;
+}
+
+/* Contenedor del input + label */
+.Usuario .campo {
+  position: relative; /* Posicionamiento relativo para el label */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  text-align: center; /* Centra el texto */
+}
+
+/* Campo de texto (input) */
 .Usuario input {
-  font-size: 1em; /* Tamaño de fuente normal */
-  padding: 1em 1em 0.5em 1em; /* Espaciado interno con más espacio arriba */
-  outline: none; /* Elimina el borde azul de enfoque */
-  border: 2px solid #59554C; /* Borde beige claro para los campos */
-  border-radius: 20px; /* Bordes redondeados para los campos */
-  width: 80%; /* Hace que el campo ocupe todo el ancho disponible */
-  transition: border-color 0.3s; /* Transición suave para el cambio de color del borde */
+  font-size: 1em; /* Tamaño de fuente estándar */
+  padding: 1em 1em 0.5em 1em; /* Espaciado interno (más arriba) */
+  outline: none; /* Quita el borde azul de enfoque */
+  border: 2px solid #4c5951; /* Borde con color gris verdoso */
+  border-radius: 20px; /* Bordes redondeados */
+  width: 80%; /* Ocupa el 80% del ancho del contenedor */
+  transition: border-color 0.3s; /* Transición suave del color del borde */
 }
 
+/* Etiqueta del campo (label) */
 .Usuario label {
-  position: absolute; /* Posicionamiento absoluto para colocarla dentro del campo */
-  top: 50%; /* Centra verticalmente la etiqueta */
-  left: 1em; /* Deja un pequeño margen a la izquierda */
-  transform: translateY(-50%); /* Ajusta el desplazamiento para centrarla */
-  color: #59554C; /* Color del texto en un marrón oscuro */
-  pointer-events: none; /* Evita que la etiqueta interfiera con los clics */
-  background-color: transparent; /* Fondo transparente para la etiqueta */
-  padding: 0 0.25em; /* Espaciado extra alrededor de la etiqueta */
-  transition: all 0.3s ease; /* Transición suave para el movimiento de la etiqueta */
+  position: absolute; /* Posición absoluta dentro del contenedor */
+  top: 50%; /* Centrada verticalmente */
+  left: 1em; /* Separación desde la izquierda */
+  transform: translateY(-50%); /* Centra completamente */
+  color: #594c4c; /* Color marrón oscuro */
+  pointer-events: none; /* No interfiere con los clics */
+  background-color: transparent; /* Fondo transparente */
+  padding: 0 0.25em; /* Espacio interno lateral */
+  transition: all 0.3s ease; /* Transición suave en cambios */
 }
 
+/* Cuando el input está enfocado o tiene texto válido */
 .Usuario input:focus,
 .Usuario input:valid {
-  border-color: #59554C; /* Cambia el borde a beige claro */
+  border-color: #59554C; /* Cambia color del borde */
 }
 
+/* Movimiento del label al enfocar o escribir */
 .Usuario input:focus ~ label,
 .Usuario input:valid ~ label {
   top: 0; /* Mueve la etiqueta hacia arriba */
-  left: 1em; /* Asegura que quede alineada a la izquierda */
-  transform: translateY(-50%) scale(0.9); /* Escala y ajusta la posición de la etiqueta */
-  background-color: #D0D9D4; /* Fondo marrón oscuro para la etiqueta */
-  border: 2px solid #59554C; /* Borde beige claro */
-  padding: 0 0.4em; /* Añade un poco de espacio alrededor de la etiqueta */
-  border-radius: 5px; /* Bordes redondeados para la etiqueta */
-  color: #59554C; /* Color de texto beige claro */
+  left: 1em; /* Mantiene alineación izquierda */
+  transform: translateY(-50%) scale(0.9); /* La reduce y ajusta posición */
+  background-color: #F2EFDF; /* Fondo del color del contenedor */
+  border: 2px solid #59554C; /* Borde del mismo color que el input */
+  padding: 0 0.4em; /* Espacio lateral */
+  border-radius: 5px; /* Bordes redondeados */
+  color: #59554C; /* Cambia el color del texto */
 }
 
 /* ---------------------- BOTÓN ---------------------- */
-/* Estilo del botón de inicio de sesión */
+/* Estilo del botón principal */
 button {
-  padding: 10px 18px; 
-  min-width: 100px;
-  border: 2px solid #524c59;
-  border-radius: 15px;
-  color: #F2EFDF; /* texto claro */
-  background: #59554C; /* gris oscuro semitransparente */
-  font-weight: 1000;
-  font-size: 13px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  margin: 20px auto;
-  z-index: 1;
-  transition: all 250ms ease;
-  justify-items: center;
-  grid-column: span 2;
+  padding: 10px 18px; /* Espaciado interno */
+  min-width: 100px; /* Ancho mínimo */
+  border: 2px solid #524c59; /* Borde gris oscuro */
+  border-radius: 15px; /* Bordes redondeados */
+  color: #F2EFDF; /* Texto claro */
+  background: #59554C; /* Fondo gris oscuro */
+  font-weight: 1000; /* Texto en negrita */
+  font-size: 13px; /* Tamaño del texto */
+  cursor: pointer; /* Cambia el cursor al pasar encima */
+  position: relative; /* Necesario para el pseudo-elemento ::before */
+  overflow: hidden; /* Oculta contenido que sobresalga */
+  margin: 20px auto; /* Espaciado vertical y centrado */
+  z-index: 1; /* Asegura que esté por encima del pseudo-elemento */
+  transition: all 250ms ease; /* Transiciones suaves */
+  justify-items: center; /* Centra el contenido en grids */
+  grid-column: span 2; /* Ocupa dos columnas si hay grid */
 }
 
 /* Capa animada detrás del botón */
 button::before {
-  content: "";
-  position: absolute;
+  content: ""; /* Crea un pseudo-elemento vacío */
+  position: absolute; /* Se posiciona respecto al botón */
   top: 0;
   left: 0;
   height: 100%;
-  width: 0;
-  background-color: #D0D9D4;
-  z-index: -1;
-  box-shadow: 4px 8px 19px -3px #59443F;
-  transition: all 250ms ease;
+  width: 0; /* Inicialmente sin ancho */
+  background-color: #F2EFDF; /* Color claro para el efecto */
+  z-index: -1; /* Detrás del botón */
+  box-shadow: 4px 8px 19px -3px #59443F; /* Sombra sutil */
+  transition: all 250ms ease; /* Transición suave del ancho */
 }
 
-/* Hover */
+/* Efecto hover (al pasar el mouse) */
 button:hover {
-  color: #59443F;
-  background: #D0D9D4; /* contraste fuerte al pasar el mouse */
+  color: #59443F; /* Cambia color del texto */
+  background: #F2EFDF; /* Invierte colores para contraste */
 }
 
-/* Expande el fondo animado */
+/* Expande el fondo animado al hacer hover */
 button:hover::before {
-  width: 100%;
+  width: 100%; /* Cubre todo el botón */
 }
-
