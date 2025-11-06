@@ -1,4 +1,4 @@
-/*-----------------Imortaciones -----------------*/
+/*-----------------Importaciones -----------------*/
 
 /* Importa una fuente llamada "Special Gothic" desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Special+Gothic:wght@400..700&display=swap');
@@ -20,7 +20,7 @@
   max-width: 800px; /* Ancho máximo del contenedor */
   background: #F2EFDF; /* Color de fondo claro */
   border-radius: 40px; /* Bordes redondeados */
-  padding: 20px; /* Espaciado interno */
+  padding: 40px 30px; /* Espaciado interno */
 }
 
 /* Contenedor interno que acomoda el formulario y la imagen lado a lado */
@@ -34,9 +34,8 @@
 
 /* Estilos para el título principal dentro del login */
 .Login h1 {
-  align-items: center; /* Centra verticalmente (aunque no afecta h1 directamente) */
-  justify-content: center; /* Centra horizontalmente */
   text-align: center; /* Centra el texto */
+  margin-bottom:  30px;
 }
 
 /* Ajustes del formulario */
@@ -62,9 +61,9 @@
 .knot-right img {
   width: 300px; /* Ancho de la imagen */
   height: 300px; /* Alto de la imagen */
-  object-fit: contain; /* Mantiene proporciones sin recortar */
   border-radius: 50px; /* Bordes redondeados */
 }
+
 
 /* Contenedor de cada campo de usuario */
 .Usuario {
@@ -102,6 +101,8 @@
   border-radius: 20px; /* Bordes redondeados */
   width: 80%; /* Ocupa el 80% del ancho del contenedor */
   transition: border-color 0.3s; /* Transición suave del color del borde */
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* Etiqueta del campo (label) */
@@ -121,6 +122,8 @@
 .Usuario input:focus,
 .Usuario input:valid {
   border-color: #59554C; /* Cambia color del borde */
+  box-shadow: 0 4px 12px rgba(89, 85, 76, 0.15);
+  transform: translateY(-1px);
 }
 
 /* Movimiento del label al enfocar o escribir */
@@ -153,8 +156,6 @@ button {
   margin: 20px auto; /* Espaciado vertical y centrado */
   z-index: 1; /* Asegura que esté por encima del pseudo-elemento */
   transition: all 250ms ease; /* Transiciones suaves */
-  justify-items: center; /* Centra el contenido en grids */
-  grid-column: span 2; /* Ocupa dos columnas si hay grid */
 }
 
 /* Capa animada detrás del botón */
@@ -180,4 +181,39 @@ button:hover {
 /* Expande el fondo animado al hacer hover */
 button:hover::before {
   width: 100%; /* Cubre todo el botón */
+}
+
+/* Estilo para el texto de registro */
+/* Contenedor del texto de registro */
+.nudo {
+  text-align: center; /* Centra horizontalmente el texto */
+  margin-top: 15px; /* Espacio arriba */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow'; 
+  font-size: 1em;
+  color: #000;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(89, 68, 63, 0.2);
+}
+
+/* Enlace de registro */
+
+.error-message {
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+
+.link-register {
+  background: none;
+  border: none;
+  color: #3498db;
+  cursor: pointer;
+  text-decoration: underline;
+  font: inherit;
+  padding: 0;
+}
+
+.link-register:hover {
+  color: #2980b9;
 }
