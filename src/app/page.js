@@ -1,27 +1,38 @@
 "use client";
 import { useState } from "react";
-import styles from "./page.module.css";
+import "./page.module.css";
 import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faLock, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Home() {
   const router = useRouter();
   const [formData, setFormData] = useState({ usuario: "", password: "" });
   const [error, setError] = useState("");
+  const [showPassword,  setShowPassword] = useState ( false );
+  const [isLoading, setIsLoading] = useState ( false );
 
 
   const handleSubmit = (e) => {
 
     e.preventDefault();
+    setError ( "" );
 
-    if (!formData.usuario || !formData.password) {
+    if (!formData.usuario.trim () || !formData.password.trim ()) {
 
       setError("Complete todos los campos");
       return;
 
     }
+
+    if (!formData.password.length < 8) {
+
+      setError( "Contraseña de Minimo 8 caracteres")
+      return;
+    }
+
+    setIsLoading ( true)
 
     console.log("Login:", formData);
 
