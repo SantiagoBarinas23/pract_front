@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import "./page.module.css";
+import "./page.css"
 import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser, faLock, faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";

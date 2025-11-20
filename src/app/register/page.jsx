@@ -11,7 +11,7 @@ export default function register(){
 
     return(
         <>
-            <div>
+            <div className="Container">
                 <h1>Hola mundo!</h1>
             </div>
         </>
